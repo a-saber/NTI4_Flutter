@@ -27,66 +27,91 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-        appBar: AppBar(
-          backgroundColor: Colors.amber,
-          // toolbarHeight: 150,
-          leading: Icon(Icons.arrow_back),
-          centerTitle: true,
-          title: Text("Home Page"),
-          actions: [
-            Text('data'),
-            Icon(Icons.settings),
-          ],
-        ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              // crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children:
+          [
 
+            // Card
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.blue,
+                  width: 3,
+                ),
+                borderRadius: BorderRadius.circular(20),
+
+              ),
+              child: Row(
+                children:
+                [
+                  // circle
+                  // Container(
+                  //   height: 50,
+                  //   width: 50,
+                  //   decoration: BoxDecoration(
+                  //     color: Colors.red,
+                  //     shape: BoxShape.circle,
+                  //   ),
+                  //   child: Icon(Icons.add),
+                  // ),
+                  CircleAvatar(
+                    backgroundColor: Colors.grey,
+                    radius: 30,
+                    child: Icon(Icons.person),
+                  ),
+                  SizedBox(width: 10,),
+
+                  // column as text
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children:
+                    [
+                      Text('Ahmed'),
+                      Text('Ahmed@gmail.com'),
+                    ],
+                  )
+                ],
+              ),
+            ),
+
+            SizedBox(height: 30,),
+            // info Text
+            Text('Info'),
+            SizedBox(height: 30,),
+
+            // age
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children:
               [
-                Column(),
-                // red box
-                Text('data'),
-                // Spacer(),
-                Container(
-                  color: Colors.red,
-                  height: 100,
-                   width: 300,
-                ),
-                // Spacer(),
-
-
+                Text('Age'),
+                Text('23'),
 
               ],
             ),
-            Row(
-              // crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
-              children:
-              [
-                Column(),
-                // red box
-                Text('data'),
-                // Spacer(),
-                Container(
-                  color: Colors.red,
-                  height: 100,
-                  width: 300,
+            Spacer(),
+
+            // save btn
+            Center(
+              child: Container(
+                width: 200,
+                height: 50,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.blueAccent
+                  ),
+                  borderRadius: BorderRadius.circular(10),
                 ),
-                // Spacer(),
-
-
-
-              ],
+                child: Center(child: Text('Save')),
+              ),
             ),
+            SizedBox(height: 50,)
           ],
         ),
-
+      ),
 
 
     );
