@@ -1,6 +1,7 @@
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
+import 'package:nti4flutter/core/utils/app_colors.dart';
 
 import 'home_view.dart';
 
@@ -24,6 +25,12 @@ class MyApp extends StatelessWidget
       {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            scaffoldBackgroundColor: AppColors.backgroundColor,
+            appBarTheme: AppBarTheme(
+              backgroundColor: AppColors.backgroundColor
+            )
+          ),
           home: HomeView(),
         );
       },
