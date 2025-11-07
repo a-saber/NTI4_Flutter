@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:nti4flutter/core/utils/app_colors.dart';
 
+import 'features/splash_view.dart';
 import 'home_view.dart';
 
 void main() {
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget
               backgroundColor: AppColors.backgroundColor
             )
           ),
-          home: HomeView(),
+          home: SplashView(),
         );
       },
 
