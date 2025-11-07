@@ -4,12 +4,18 @@ import 'package:flutter_svg/svg.dart';
 import 'package:nti4flutter/core/utils/app_assets.dart';
 import 'package:nti4flutter/home_view.dart';
 
-class SplashView extends StatelessWidget {
+class SplashView extends StatefulWidget {
   const SplashView({super.key});
 
   @override
+  State<SplashView> createState() => _SplashViewState();
+}
+
+class _SplashViewState extends State<SplashView> {
+  @override
   Widget build(BuildContext context) {
-    Future.delayed(
+    if(mounted) {
+      Future.delayed(
       Duration(seconds: 3),
         (){
           print('after 3 seconds');
@@ -17,11 +23,12 @@ class SplashView extends StatelessWidget {
           context, MaterialPageRoute(builder: (context) => HomeView()));
     }
     );
+    }
 
     return Scaffold(
       body: Center(
         child: SvgPicture.asset(
-          AppAssets.logoPath,
+          AppAssets.logo,
           height: 344.h,
           width: 334.w,
         ),

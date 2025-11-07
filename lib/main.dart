@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:nti4flutter/core/utils/app_colors.dart';
 
+import 'features/register_view.dart';
 import 'features/splash_view.dart';
 import 'home_view.dart';
 
@@ -27,12 +28,15 @@ class MyApp extends StatelessWidget
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            scaffoldBackgroundColor: AppColors.backgroundColor,
+            // primaryColor: AppColors.primary,
+            // useMaterial3: ,
+              colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
+              scaffoldBackgroundColor: AppColors.backgroundColor,
             appBarTheme: AppBarTheme(
               backgroundColor: AppColors.backgroundColor
             )
           ),
-          home: SplashView(),
+          home: RegisterView(),
         );
       },
 
