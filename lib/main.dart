@@ -5,6 +5,7 @@ import 'package:nti4flutter/core/utils/app_colors.dart';
 
 import 'features/register_view.dart';
 import 'features/splash_view.dart';
+import 'features/test_scroll.dart';
 import 'home_view.dart';
 
 void main() {
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget
               backgroundColor: AppColors.backgroundColor
             )
           ),
-          home: RegisterView(),
+          home: TestScroll(),
         );
       },
 
