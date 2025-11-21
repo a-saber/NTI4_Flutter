@@ -8,6 +8,7 @@ class ProductItemBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.all(5),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(15),
@@ -25,10 +26,13 @@ class ProductItemBuilder extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children:
         [
-          SizedBox(
-              height: 100,
-              width: 100,
-              child: Image.network(productModel.imagePath, fit: BoxFit.cover,)
+          ClipRRect(
+            borderRadius: BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15)),
+            child: SizedBox(
+                height: 100,
+                width: 100,
+                child: Image.network(productModel.imagePath, fit: BoxFit.cover,)
+            ),
           ),
           SizedBox(height: 8,),
           Padding(
