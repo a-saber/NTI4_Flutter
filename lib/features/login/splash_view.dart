@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nti4flutter/core/utils/app_assets.dart';
-import 'package:nti4flutter/home_view.dart';
+import 'package:nti4flutter/features/login/home_view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
